@@ -41,7 +41,7 @@ int main()
 	imwrite("marker.png", img);
 
 	myimgpro.DecodeMark1(img, cir);
-	myimgpro.identify_cir(img, cir.cir_vec,cir.cir_id);
+	myimgpro.identify_cir_hsv(img, cir.cir_vec,cir.cir_id);
 	cir.show_circle_id(img);
 	cir.show_circle(img);//»­Ô²ÐÄ
 
