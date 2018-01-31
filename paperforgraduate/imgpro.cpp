@@ -97,7 +97,7 @@ void imgpro::findEllipses(const vector< vector<cv::Point2f> >& contoursRaw, std:
 	return;
 }
 
-//椭圆检测
+//椭圆检测,提取圆心到vpUV
 bool imgpro::DecodeMark1(Mat &image, std::vector<cv::Point2f>& vpUV)
 {
 	bool found = false;
@@ -105,10 +105,10 @@ bool imgpro::DecodeMark1(Mat &image, std::vector<cv::Point2f>& vpUV)
 
 	DecodeMark1(image, temp);
 	
-	int size=temp.cir_idle_ab.size();
+	int size=temp.cir_idle_ab_detect.size();
 	for (size_t i = 0; i < size; i++)
 	{
-		vpUV.push_back(temp.cir_idle_ab[i].center);
+		vpUV.push_back(temp.cir_idle_ab_detect[i].center);
 	}
 
 	return found;
@@ -192,6 +192,11 @@ bool imgpro::DecodeMark1(Mat &image, mycircle &cir)
 	cir.cir_idle_ab_detect.clear();
 	findEllipses(contours, EllipseContour, cir.cir_idle_ab_detect);
 
+	int size = cir.cir_idle_ab_detect.size();
+	for (size_t i = 0; i < size; i++)
+	{
+		cir.cir_vec.push_back(cir.cir_idle_ab_detect[i].center);
+	}
 	//////////////////////////////////////////////////////////////////////////
 	return found;
 }
@@ -229,7 +234,7 @@ void imgpro::identify_cir(Mat &image, std::vector<cv::Point2f>& vpUV, std::vecto
 }
 
 //加噪点
-void salt(Mat image, int n)
+void imgpro::salt(Mat &image, int n)
 {
 	int i, j;
 	for (int k = 0; k<n; k++)

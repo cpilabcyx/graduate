@@ -11,7 +11,7 @@ float res_c_r_w::dis_comput_point(Point2f a, Point2f b)
 }
 
 //2d点乱序，最小距离
-int res_c_r_w::comput_err2d_random_order(const vector<Point2f> detected, const vector<Point2f>idle, vector<float>err)
+int res_c_r_w::comput_err2d_random_order(const vector<Point2f> &detected, const vector<Point2f> &idle, vector<float> &err)
 {
 	int num_match = 0;
 	int seze_idle = idle.size();
@@ -29,6 +29,31 @@ int res_c_r_w::comput_err2d_random_order(const vector<Point2f> detected, const v
 	}
 	return num_match;
 }
+
+//空的，日后填
+int res_c_r_w::comput_err2d_random_order(const vector<RotatedRect> &detected, const vector<RotatedRect> &idle, vector<float> &err)
+{
+	return 0;
+}
+
+int res_c_r_w::txt_record(string& filneme, vector<Point2f> &point2d)
+{
+	ofstream out(filneme);
+	int size = point2d.size();
+	for (int i = 0; i < size; i++)
+		out << point2d[i].x << " " << point2d[i].y << endl;
+	return size;
+}
+
+int res_c_r_w::txt_record(string& filneme, vector<float> &point)
+{
+	ofstream out(filneme);
+	int size = point.size();
+	for (int i = 0; i < size; i++)
+		out << point[i] << endl;
+	return size;
+}
+
 
 res_c_r_w::~res_c_r_w()
 {

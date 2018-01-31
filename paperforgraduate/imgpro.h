@@ -40,7 +40,7 @@ public:
 	void identify_cir(Mat &image, std::vector<cv::Point2f>& vpUV, std::vector<int>& id);
 
 	//º”‘Îµ„
-	void salt(Mat& image, int n);
+	void salt(Mat &image, int n);
 
 	~imgpro();
 };

@@ -22,14 +22,14 @@ public:
 public:
 	mycircle();
 
-	//½«ÍÖÔ²ÏÔÊ¾ÔÚÍ¼ÏñÉÏ
+	//»­¼ì²âµ½Ô²ĞÄ circle(img, cir_vec[i], 3, Scalar(255, 255, 255), CV_FILLED);
 	Mat& show_circle(Mat& img);
 
-	//½«ÍÖÔ²idÏÔÊ¾ÔÚÍ¼ÏñÉÏ
+	//»­¼ì²âµ½Ô²Ë³Ğò/id  sprintf(s, "%d", cir_id[i]);
 	Mat& show_circle_id(Mat& img);
 
-	//»­ÍÖÔ²
-	Mat& genarate_ellipse(Mat& img, vector<RotatedRect> &center_ab_size, Scalar corlor = Scalar(0,0,0));
+	//»­ÍÖÔ²,Ä¬ÈÏÌî³ä thickness=-1
+	Mat& genarate_ellipse(Mat& img, vector<RotatedRect> &center_ab_size, Scalar corlor = Scalar(0,0,0), int thickness=-1);
 
 	//»­Ô²
 	Mat& genarate_cir(Mat& img, vector<Point2f> center_idle, int radius);
