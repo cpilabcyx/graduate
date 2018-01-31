@@ -11,20 +11,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="imgpro.h" />
-    <ClInclude Include="mycircle.h" />
-    <ClInclude Include="res_c_r_w.h" />
+    <ClCompile Include="..\..\..\mycode_class\imgpro.cpp" />
+    <ClCompile Include="..\..\..\mycode_class\mycircle.cpp" />
+    <ClCompile Include="..\..\..\mycode_class\res_c_r_w.cpp" />
+    <ClCompile Include="color_match.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="corlortest.cpp" />
-    <ClCompile Include="imgpro.cpp" />
-    <ClCompile Include="mycircle.cpp" />
-    <ClCompile Include="res_c_r_w.cpp" />
+    <ClInclude Include="..\..\..\mycode_class\imgpro.h" />
+    <ClInclude Include="..\..\..\mycode_class\mycircle.h" />
+    <ClInclude Include="..\..\..\mycode_class\res_c_r_w.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0AB0CDD2-680A-4009-8FB7-4C6274674288}</ProjectGuid>
+    <ProjectGuid>{E389F23E-14E3-456F-A050-065858935ABA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>paperforgraduate</RootNamespace>
+    <RootNamespace>corlor_identifi_match</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
