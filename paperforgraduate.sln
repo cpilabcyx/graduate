@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "paperforgraduate", "paperforgraduate\paperforgraduate.vcxproj", "{0AB0CDD2-680A-4009-8FB7-4C6274674288}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "detect_circle_accuracy", "paperforgraduate\paperforgraduate.vcxproj", "{0AB0CDD2-680A-4009-8FB7-4C6274674288}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "corlor_identifi_match", "corlor_identifi_match\corlor_identifi_match.vcxproj", "{E389F23E-14E3-456F-A050-065858935ABA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "genarate_mymarker", "genarate_mymarker\genarate_mymarker.vcxproj", "{3A9B1F39-899F-4810-8AB7-02806B6D659B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "measure_test", "measure_test\measure_test.vcxproj", "{3A8515E7-C23B-4E56-8ECB-87698422F882}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3A9B1F39-899F-4810-8AB7-02806B6D659B}.Debug|Win32.Build.0 = Debug|Win32
 		{3A9B1F39-899F-4810-8AB7-02806B6D659B}.Release|Win32.ActiveCfg = Release|Win32
 		{3A9B1F39-899F-4810-8AB7-02806B6D659B}.Release|Win32.Build.0 = Release|Win32
+		{3A8515E7-C23B-4E56-8ECB-87698422F882}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A8515E7-C23B-4E56-8ECB-87698422F882}.Debug|Win32.Build.0 = Debug|Win32
+		{3A8515E7-C23B-4E56-8ECB-87698422F882}.Release|Win32.ActiveCfg = Release|Win32
+		{3A8515E7-C23B-4E56-8ECB-87698422F882}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
