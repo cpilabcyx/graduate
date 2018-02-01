@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="color_match.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\mycode_class\imgpro.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -25,6 +22,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\mycode_class\res_c_r_w.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="color_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

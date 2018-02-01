@@ -14,7 +14,7 @@
     <ClCompile Include="..\..\..\mycode_class\imgpro.cpp" />
     <ClCompile Include="..\..\..\mycode_class\mycircle.cpp" />
     <ClCompile Include="..\..\..\mycode_class\res_c_r_w.cpp" />
-    <ClCompile Include="color_match.cpp" />
+    <ClCompile Include="color_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\mycode_class\imgpro.h" />
