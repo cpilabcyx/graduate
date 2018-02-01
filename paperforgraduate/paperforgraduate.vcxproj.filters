@@ -25,9 +25,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="corlortest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="imgpro.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -35,6 +32,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="res_c_r_w.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="detect_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
