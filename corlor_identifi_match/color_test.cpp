@@ -6,7 +6,7 @@ int main()
 	imgpro myimgpro;//图像处理类
 	mycircle cir;//标志点类
 
-	Mat img = imread("7.png");
+	Mat img = imread("1.png");
 	imshow("yuantu", img);
 	waitKey(1);
 
@@ -19,11 +19,8 @@ int main()
 
 	imshow("res", img);
 	waitKey(0);
-	//双目标定f
 
-	//标志点匹配
-
-	//测量
+	//思路，光照变化时算法的鲁棒性 即识别正确率统计，改进，中心5 X 5 统计平均hsv需优化
 
 	return 0;
 }

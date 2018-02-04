@@ -66,6 +66,8 @@ int main()
 	for (int i = 0; i < err.size(); i++)
 		cout << err[i]<<" ";
 
+	//思路： 拟合误差统计，pixel，matlab可视化，圆，椭圆
+
 	imshow("res",img);
 	waitKey(0);
 	return 0;
