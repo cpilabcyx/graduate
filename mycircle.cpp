@@ -60,6 +60,27 @@ Mat& mycircle::show_circle_id(Mat& img)
 	return img;
 }
 
+//»­Æ¥Åä½á¹û
+Mat& mycircle::show_match_order(Mat& img)
+{
+	if (!img.data)
+	{
+		cout << "no data 1232";
+		return img;
+	}
+	IplImage tstim = img;
+	CvFont font;
+	cvInitFont(&font, CV_FONT_HERSHEY_PLAIN | CV_FONT_ITALIC, 2.0, 2.0, 1, 1);
+	for (size_t i = 0; i < cir_match_vec.size(); i++)
+	{
+		char s[100];
+		sprintf(s, "%d", i);
+		cvPutText(&tstim, s, cir_match_vec[i], &font, CV_RGB(0, 0, 0));
+		circle(img, cir_match_vec[i], 3, Scalar(255, 255, 255), CV_FILLED);//
+	}
+	return img;
+}
+
 //»­ÍÖÔ²,Ä¬ÈÏºÚÉ«corlor£¨0,0,0£©£¬Ä¬ÈÏÌî³äthickness=-1
 Mat& mycircle::genarate_ellipse(Mat& img, vector<RotatedRect> &center_ab_size, Scalar corlor, int thickness)
 {

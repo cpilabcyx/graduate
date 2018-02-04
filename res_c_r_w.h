@@ -21,6 +21,12 @@ public:
 	//2d点欧氏距离
 	float dis_comput_point(Point2f a, Point2f b);
 
+	//3d点欧氏距离
+	float dis_comput_point(Point3f a, Point3f b);
+
+	//输出3d点
+	int cout_3d_point(const vector<Point3f> &point3d);
+
 	//2d点乱序，最小距离
 	int comput_err2d_random_order(const vector<Point2f> &detected, const vector<Point2f> &idle, vector<float> &err);
 
@@ -34,7 +40,9 @@ public:
 	//读取xml
 	bool xml_read(char filneme[], char mat_name[], Mat& mat);
 
-
+	//融合两个矩阵
+	Mat mergeRows(Mat& A, Mat& B);//行[A ; B]
+	Mat mergecols(Mat& A, Mat& B);//列[A   B]
 
 	~res_c_r_w();
 };

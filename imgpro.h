@@ -31,10 +31,10 @@ public:
 	void findEllipses(const vector< vector<cv::Point2f> >& contoursRaw, std::vector< int >& sublabEllipse, std::vector<RotatedRect>& rectEll);
 
 	//椭圆检测
-	bool DecodeMark1(Mat &image, std::vector<cv::Point2f>& vpUV);
+	bool DecodeMark1(Mat &image, std::vector<cv::Point2f>& vpUV, bool if_gray=false);
 
 	//椭圆检测,记录长短轴
-	bool DecodeMark1(Mat &image, mycircle &cir);
+	bool DecodeMark1(Mat &image, mycircle &cir,bool if_gray = false);
 
 	//椭圆鉴别hsv
 	void identify_cir_hsv(Mat &image, vector<cv::Point2f>& vpUV, vector<int>& hsv);
@@ -44,6 +44,15 @@ public:
 
 	//加噪点
 	void salt(Mat &image, int n);
+
+	//极线匹配
+	bool matchEllipse(vector<Point2f>& cir_cev_l, vector<Point2f>& cir_cev_r, vector<Point2f>& cir_match_cev_l, vector<Point2f>& cir_match_cev_r, Mat& F_2_1);
+	bool matchEllipse(mycircle &cir_l, mycircle &cir_r, Mat& F_2_1);
+
+	//由双目像素坐标计算世界坐标
+	bool pointTo3D(vector<Point2f>& vec_uvLeft, vector<Point2f>& vec_uvRight, Mat& mLeftIntrinsic, Mat& mRightIntrinsic, Mat& mRightRT, vector<Point3f>& vec_3d);
+
+	bool tack_flow(Mat& pregray, Mat& gray, vector<Point2f>& pre, vector<Point2f>& now, vector<uchar>& status,vector<float>& err);
 
 	~imgpro();
 };

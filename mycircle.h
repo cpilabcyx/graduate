@@ -15,7 +15,7 @@ public:
 	vector<int> cir_id_idle;//理论id
 	vector<RotatedRect> cir_idle_ab;//理论圆心
 
-	vector<Point2f> cir_vec;//检测到圆心
+	vector<Point2f> cir_vec,cir_match_vec;//检测到圆心,匹配过的
 
 	vector<int> cir_hsv;//鉴别hsv
 	vector<int> cir_id;//鉴别id
@@ -29,6 +29,9 @@ public:
 
 	//画检测到圆顺序/id  sprintf(s, "%d", cir_id[i]);
 	Mat& show_circle_id(Mat& img);
+
+	//画匹配结果
+	Mat& show_match_order(Mat& img);
 
 	//画椭圆,默认填充 黑色 thickness=-1
 	Mat& genarate_ellipse(Mat& img, vector<RotatedRect> &center_ab_size, Scalar corlor = Scalar(0,0,0), int thickness=-1);
